@@ -15,8 +15,8 @@ namespace Unit04.Game.Casting
         private string _text = "";
         private int _fontSize = 15;
         private Color _color = new Color(255, 255, 255); // white
-        private Point _position = new Point(0, 0);
-        private Point _velocity = new Point(0, 0);
+        protected Point _position = new Point(0, 0);
+        protected Point _velocity = new Point(0, 0);
 
         /// <summary>
         /// Constructs a new instance of Actor.
@@ -80,7 +80,7 @@ namespace Unit04.Game.Casting
         public void MoveNext(int maxX, int maxY)
         {
             int x = ((_position.GetX() + _velocity.GetX()) + maxX) % maxX;
-            int y = ((_position.GetY() + _velocity.GetY()) + maxY) % maxY;
+            int y = 570;
             _position = new Point(x, y);
         }
 
@@ -157,4 +157,4 @@ namespace Unit04.Game.Casting
         }
 
     }
-}// nachos
+}

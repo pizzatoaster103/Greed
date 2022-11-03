@@ -15,8 +15,8 @@ namespace Unit04.Game.Services
     {
         private int _cellSize = 15;
         private string _caption = "";
-        private int _width = 640;
-        private int _height = 480;
+        private int _width = 640; //Default 640
+        private int _height = 480; //Default 480
         private int _frameRate = 0;
         private bool _debug = false;
 
@@ -24,7 +24,7 @@ namespace Unit04.Game.Services
         /// Constructs a new instance of KeyboardService using the given cell size.
         /// </summary>
         /// <param name="cellSize">The cell size (in pixels).</param>
-        public VideoService(string caption, int width, int height, int cellSize, int frameRate, 
+        public VideoService(string caption, int width, int height, int cellSize, int frameRate,
                 bool debug)
         {
             this._caption = caption;
@@ -83,7 +83,7 @@ namespace Unit04.Game.Services
                 DrawActor(actor);
             }
         }
-        
+
         /// <summary>
         /// Copies the buffer contents to the screen. This method should be called at the end of
         /// the game's output phase.
