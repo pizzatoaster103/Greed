@@ -36,6 +36,10 @@ namespace Unit04.Game.Casting
             _position = new Point(x, y);
         }
         */
+        public void Movement()
+        {
+
+        }
 
 
         /// <summary>

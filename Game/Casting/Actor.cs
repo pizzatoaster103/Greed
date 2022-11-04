@@ -84,6 +84,12 @@ namespace Unit04.Game.Casting
             _position = new Point(x, y);
         }
 
+        public void Fall(int maxX, int maxY)
+        {
+            int y = ((_position.GetY() + _velocity.GetY()) + maxY) % maxY;
+            while _position = new Point
+        }
+
         /// <summary>
         /// Sets the actor's color to the given value.
         /// </summary>

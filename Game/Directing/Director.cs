@@ -69,14 +69,17 @@ namespace Unit04.Game.Directing
             int maxX = _videoService.GetWidth();
             int maxY = _videoService.GetHeight();
             robot.MoveNext(maxX, maxY);
+            banner.SetText(score.ToString());
+
 
             foreach (Actor actor in artifacts)
             {
+                actor.Fall(maxX, maxY);
                 if (robot.GetPosition().Equals(actor.GetPosition()))
                 {
                     Artifact artifact = (Artifact)actor;
-                    string message = artifact.GetMessage();
-                    banner.SetText(score.ToString());
+                    //if object touching robot is a rock, score -=1, else score +=1
+
                 }
             }
         }
