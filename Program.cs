@@ -18,7 +18,7 @@ namespace Unit04
         private static int MAX_X = 900;//Default 900
         private static int MAX_Y = 600;//Default 600
         private static int CELL_SIZE = 15;
-        private static int FONT_SIZE = 15;
+        private static int FONT_SIZE = 33;
         private static int COLS = 60;//Default 60
         private static int ROWS = 40;//Default 40
         private static string CAPTION = "Greed";
@@ -61,14 +61,14 @@ namespace Unit04
             {
                 // CHAR = ■ (alt254)
                 string text = "o";
-                int indexx = random.Next(0, 2);
+                int indexx = random.Next(0, 3);
                 if (indexx == 1)
                 {
                     text = ((char)random.Next(42, 43)).ToString();
                 }
                 else
                 {
-                    text = ((char)random.Next(177, 178)).ToString();
+                    text = ((char)random.Next(164, 165)).ToString();
                 }
 
                 string message = messages[i];
@@ -78,9 +78,19 @@ namespace Unit04
                 Point position = new Point(x, y);
                 position = position.Scale(CELL_SIZE);
 
-                int r = random.Next(0, 256);
-                int g = random.Next(0, 256);
-                int b = random.Next(0, 256);
+                int r = 0;
+                int b = 0;
+                int g = 0;
+
+                while (r + g + b < 255)
+                {
+                    r = random.Next(0, 256);
+                    g = random.Next(0, 256);
+                    b = random.Next(0, 256);
+                }
+
+                int speed = random.Next(1, 4);
+                speed = speed * 5;
                 Color color = new Color(r, g, b);
 
                 Artifact artifact = new Artifact();
@@ -89,6 +99,7 @@ namespace Unit04
                 artifact.SetColor(color);
                 artifact.SetPosition(position);
                 artifact.SetMessage(message);
+                artifact.SetSpeed(speed);
                 cast.AddActor("artifacts", artifact);
             }
 

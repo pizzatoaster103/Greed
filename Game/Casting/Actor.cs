@@ -12,7 +12,8 @@ namespace Unit04.Game.Casting
     /// </summary>
     public class Actor
     {
-        private string _text = "";
+        public string _text = "";
+        int _speed = 0;
         private int _fontSize = 15;
         private Color _color = new Color(255, 255, 255); // white
         protected Point _position = new Point(0, 0);
@@ -88,8 +89,14 @@ namespace Unit04.Game.Casting
         public void Fall(int maxX, int maxY)
         {
             int x = _position.GetX();
-            int y = ((_position.GetY() + rand.Next(5, 15)) + maxY) % maxY;
+            int y = ((_position.GetY() + this._speed) + maxY) % maxY;
             _position = new Point(x, y);
+        }
+
+        public int Speed()
+        {
+
+            return _speed;
         }
 
         /// <summary>
@@ -164,5 +171,9 @@ namespace Unit04.Game.Casting
             this._velocity = velocity;
         }
 
+        public void SetSpeed(int speed)
+        {
+            this._speed = speed;
+        }
     }
 }

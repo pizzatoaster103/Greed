@@ -78,7 +78,14 @@ namespace Unit04.Game.Directing
                 if (robot.GetPosition().Equals(actor.GetPosition()))
                 {
                     Artifact artifact = (Artifact)actor;
-                    //if object touching robot is a rock, score -=1, else score +=1
+                    if (actor._text == "*")
+                    {
+                        score += 1;
+                    }
+                    else
+                    {
+                        score -= 1;
+                    }
 
                 }
             }
