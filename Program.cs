@@ -15,9 +15,9 @@ namespace Unit04
     class Program
     {
         private static int FRAME_RATE = 12;
-        private static int MAX_X = 900;//Default 900
-        private static int MAX_Y = 600;//Default 600
-        private static int CELL_SIZE = 15;
+        private static int MAX_X = 1200;//Default 900
+        private static int MAX_Y = 900;//Default 600
+        private static int CELL_SIZE = 30;
         private static int FONT_SIZE = 33;
         private static int COLS = 60;//Default 60
         private static int ROWS = 40;//Default 40
@@ -110,7 +110,6 @@ namespace Unit04
             Director director = new Director(keyboardService, videoService);
             director.StartGame(cast);
 
-            // test comment
         }
     }
 }
