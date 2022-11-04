@@ -18,13 +18,13 @@ namespace Unit04
         private static int MAX_X = 1200;//Default 900
         private static int MAX_Y = 900;//Default 600
         private static int CELL_SIZE = 30;
-        private static int FONT_SIZE = 33;
+        private static int FONT_SIZE = 45;
         private static int COLS = 60;//Default 60
         private static int ROWS = 40;//Default 40
         private static string CAPTION = "Greed";
         private static string DATA_PATH = "Data/messages.txt";
         private static Color WHITE = new Color(255, 255, 255);
-        private static int DEFAULT_ARTIFACTS = 40;
+        private static int DEFAULT_ARTIFACTS = 50;
 
 
         /// <summary>
@@ -61,14 +61,18 @@ namespace Unit04
             {
                 // CHAR = ■ (alt254)
                 string text = "o";
-                int indexx = random.Next(0, 3);
+                int indexx = random.Next(0, 10);
                 if (indexx == 1)
+                {
+                    text = ((char)random.Next(164, 165)).ToString();
+                }
+                else if (indexx < 4)
                 {
                     text = ((char)random.Next(42, 43)).ToString();
                 }
                 else
                 {
-                    text = ((char)random.Next(164, 165)).ToString();
+                    text = ((char)random.Next(64, 65)).ToString();
                 }
 
                 string message = messages[i];

@@ -82,15 +82,18 @@ namespace Unit04.Game.Directing
                     {
                         score += 1;
                     }
-                    else
+                    else if (actor._text == "@")
                     {
                         score -= 1;
+                    }
+                    else
+                    {
+                        score += 3;
                     }
 
                 }
             }
         }
-
         /// <summary>
         /// Draws the actors on the screen.
         /// </summary>
