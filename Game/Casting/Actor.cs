@@ -87,7 +87,10 @@ namespace Unit04.Game.Casting
         public void Fall(int maxX, int maxY)
         {
             int y = ((_position.GetY() + _velocity.GetY()) + maxY) % maxY;
-            while _position = new Point
+            while _position = new Point(x, y)
+            {
+
+            }
         }
 
         /// <summary>
