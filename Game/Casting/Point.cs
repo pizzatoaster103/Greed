@@ -9,8 +9,8 @@ namespace Unit04.Game.Casting
     /// </summary>
     public class Point
     {
-        public int _x = 0;
-        public int _y = 0;
+        private int _x = 0;
+        private int _y = 0;
 
         /// <summary>
         /// Constructs a new instance of Point using the given x and y values.
