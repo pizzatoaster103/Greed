@@ -2,8 +2,9 @@
 
 Some of us like the prospect of finding valuable treasure. The point
 of greed is to be the greedy Indiana Jones you are, but IN SPAAACE!
-The game is simple: gems (\*) will add one point, while asteroids (▒)
-take away points.
+The game is simple: gems (\*) will add one point, while asteroids (@)
+take away one point. Special gems give 3 points. If you get 50 points,
+you unlock free movement along the y axis.
 
 ---
 
@@ -45,5 +46,5 @@ root                    (project root folder)
 
 - Matt Manley (manleym@byui.edu)
 - Scott Burton (burtons@byui.edu)
-- Jacob Holst (totallylegitemail@com.gmail)
-- Dallin S (I think the S stands for 'Stupendous') (anotherlegitemail.com@yahooooo)
+- Jacob Holst (A.K.A: "The GOAT") (Icanspeakbritish@thegov'na.gov)
+- Dallin S (I think the S stands for 'Stupendous') (dallinthegreat2@gmail.com)

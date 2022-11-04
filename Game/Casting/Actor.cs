@@ -1,6 +1,5 @@
 using System;
 
-
 namespace Unit04.Game.Casting
 {
     /// <summary>
@@ -19,6 +18,9 @@ namespace Unit04.Game.Casting
         protected Point _position = new Point(0, 0);
         protected Point _velocity = new Point(0, 0);
         Random rand = new Random();
+        private static int COLS = 60;
+        private static int CELL_SIZE = 30;
+
 
         /// <summary>
         /// Constructs a new instance of Actor.
@@ -79,17 +81,30 @@ namespace Unit04.Game.Casting
         /// </summary>
         /// <param name="maxX">The maximum x value.</param>
         /// <param name="maxY">The maximum y value.</param>
-        public void MoveNext(int maxX, int maxY)
+        public void MoveNext(int maxX, int maxY, int score)
         {
             int x = ((_position.GetX() + _velocity.GetX()) + maxX) % maxX;
-            int y = 780;
+            int y = 0;
+            if (score > 10)
+            {
+                y = ((_position.GetY() + _velocity.GetY()) + maxY) % maxY;
+            }
+            else
+            {
+                y = 780;
+            }
             _position = new Point(x, y);
         }
 
         public void Fall(int maxX, int maxY)
         {
             int x = _position.GetX();
-            int y = ((_position.GetY() + this._speed) + maxY) % maxY;
+            int y = 0;
+            if (this._position.GetY() > 870)
+            {
+                TransformationCentral();
+            }
+            y = ((_position.GetY() + this._speed) + maxY) % maxY;
             _position = new Point(x, y);
         }
 
@@ -97,6 +112,34 @@ namespace Unit04.Game.Casting
         {
 
             return _speed;
+        }
+
+        protected void TransformationCentral()
+        {
+            this._speed = rand.Next(1, 4);
+            this._speed *= 5;
+            this._position = new Point(rand.Next(1, 60), rand.Next(0));
+            this._position = _position.Scale(30);
+            this._text = GetSoupText();
+        }
+
+        public string GetSoupText()
+        {
+            int indexx = rand.Next(0, 9);
+            string text = "";
+            if (indexx == 1)
+            {
+                text = ((char)rand.Next(164, 165)).ToString();
+            }
+            else if (indexx < 4)
+            {
+                text = ((char)rand.Next(42, 43)).ToString();
+            }
+            else
+            {
+                text = ((char)rand.Next(64, 65)).ToString();
+            }
+            return text;
         }
 
         /// <summary>

@@ -68,7 +68,7 @@ namespace Unit04.Game.Directing
             banner.SetText("");
             int maxX = _videoService.GetWidth();
             int maxY = _videoService.GetHeight();
-            robot.MoveNext(maxX, maxY);
+            robot.MoveNext(maxX, maxY, score);
             banner.SetText(score.ToString());
 
 
@@ -91,6 +91,12 @@ namespace Unit04.Game.Directing
                         score += 3;
                     }
 
+                    // trying to exit game if we reach x number of points
+                    if (score > 100)
+                    {
+                        _videoService.IsWindowOpen();
+                        break;
+                    }
                 }
             }
         }
