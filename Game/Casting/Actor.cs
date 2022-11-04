@@ -17,6 +17,7 @@ namespace Unit04.Game.Casting
         private Color _color = new Color(255, 255, 255); // white
         protected Point _position = new Point(0, 0);
         protected Point _velocity = new Point(0, 0);
+        Random rand = new Random();
 
         /// <summary>
         /// Constructs a new instance of Actor.
@@ -86,11 +87,9 @@ namespace Unit04.Game.Casting
 
         public void Fall(int maxX, int maxY)
         {
-            int y = ((_position.GetY() + _velocity.GetY()) + maxY) % maxY;
-            while _position = new Point(x, y)
-            {
-
-            }
+            int x = _position.GetX();
+            int y = ((_position.GetY() + rand.Next(5, 15)) + maxY) % maxY;
+            _position = new Point(x, y);
         }
 
         /// <summary>
