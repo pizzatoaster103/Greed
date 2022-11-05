@@ -46,5 +46,5 @@ root                    (project root folder)
 
 - Matt Manley (manleym@byui.edu)
 - Scott Burton (burtons@byui.edu)
-- Jacob Holst (A.K.A: "The GOAT") (Icanspeakbritish@thegov'na.gov)
+- Jacob Holst (A.K.A: "The GOAT") (Icanspeakbritish@thegov'na.gov) (if that one doesn't exist yet, then hol19002@byui.edu)
 - Dallin S (I think the S stands for 'Stupendous') (dallinthegreat2@gmail.com)
