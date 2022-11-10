@@ -90,6 +90,7 @@ namespace Unit04.Game.Directing
                     {
                         score += 3;
                     }
+                    actor.TransformationCentral();
 
                     // trying to exit game if we reach x number of points
                     if (score > 100)

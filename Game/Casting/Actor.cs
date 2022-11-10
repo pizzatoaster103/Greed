@@ -114,7 +114,7 @@ namespace Unit04.Game.Casting
             return _speed;
         }
 
-        protected void TransformationCentral()
+        public void TransformationCentral()
         {
             this._speed = rand.Next(1, 4);
             this._speed *= 5;
